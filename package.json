@@ -1,0 +1,14 @@
+{
+  "name": "ble-packet",
+  "version": "1.0.0",
+  "description": "Plan BLE ATT writes, reassemble notifications, and check CRC-16 without a radio.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "author": "Song Xiangrong",
+  "license": "MIT",
+  "keywords": ["ble", "bluetooth", "ota", "crc16", "mtu"]
+}
