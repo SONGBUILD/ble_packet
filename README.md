@@ -22,6 +22,10 @@ encodeNotify(part, true);  // bit 0 of byte 0 is 1, last fragment
 
 Notification layout used here: the first byte is flags, bit 0 means “last fragment”, and the rest is payload. Match that on the firmware side, or only use `planWrites` if your device already has its own framing.
 
+## A checked split
+
+50 bytes at MTU 23 become writes of 20, 20, and 10. `crc16CcittFalse("123456789")` is `0x29b1`. Both are asserted by `npm test`.
+
 ```bash
 npm test
 ```
