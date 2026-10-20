@@ -26,6 +26,10 @@ Notification layout used here: the first byte is flags, bit 0 means “last frag
 
 50 bytes at MTU 23 become writes of 20, 20, and 10. `crc16CcittFalse("123456789")` is `0x29b1`. Both are asserted by `npm test`.
 
+## Out of scope
+
+No scanning, pairing, or vendor command tables. The app that already holds the connection stays in charge of those.
+
 ```bash
 npm test
 ```
